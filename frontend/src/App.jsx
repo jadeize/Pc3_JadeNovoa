@@ -9,7 +9,8 @@ function App() {
 
   // Consumir la API del backend una sola vez
   useEffect(() => {
-    fetch("/api/universities")
+    fetch("/api/search?country=Peru")
+    
       .then((res) => {
         if (!res.ok) throw new Error("Error al cargar los datos");
         return res.json();
